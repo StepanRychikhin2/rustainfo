@@ -25,25 +25,36 @@ client.on('connected', () => {
 	// 	console.log(data)
 	// })
 	// client.getMapMarkers()
+	// client.sendRequest(
+	// 	{
+	// 		getMapMarkers: {},
+	// 	},
+	// 	(message) => {
+	// 		console.log(message)
+	// 	},
+	// )
+	// client.getMapMarkers()
+	// client.sendRequest(
+	// 	{
+	// 		// amountInStock: "5",
+	// 		getTime: {},
+	// 	},
+	// 	(message) => {
+	// 		console.log(message)
+	// 	},
+	// )
+	client.sendRequest(
+		{
+			// amountInStock: "5",
+			getInfo: {},
+		},
+		(message) => {
+			console.log(message)
+		},
+	)
+	
+	// client.getTime(())
 	sendMessage('Bot online 😎')
-})
-
-client.sendRequest(() => {
-	client.getMapMarkers((data) => {
-		console.log(data)
-	})
-})
-
-const rl = readline.createInterface({
-	input: process.stdin,
-	output: process.stdout,
-})
-
-rl.on('line', (input) => {
-	if (input === '/heli') {
-		// console.log(getMapMarkers())
-		// sendMessage(input)
-	}
 })
 
 client.connect()
