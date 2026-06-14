@@ -24,16 +24,14 @@ client.on('connected', () => {
 	// client.getMapMarkers((data) => {
 	// 	console.log(data)
 	// })
-	client.getMapMarkers((data) => {
-		console.log(data)
-	})
+	// client.getMapMarkers()
 	sendMessage('Bot online 😎')
 })
 
 client.sendRequest(() => {
-    client.getMapMarkers((data) => {
-        console.log(data)
-    })
+	client.getMapMarkers((data) => {
+		console.log(data)
+	})
 })
 
 const rl = readline.createInterface({
